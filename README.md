@@ -8,3 +8,5 @@ Important Classes:
 
 Important Test Classes:
 Main Test Execution Class => TestStringCalculator.java
+
+[Note for an Assessor]: Please refer to the "master" branch while evaluating the project.
