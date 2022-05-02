@@ -6,4 +6,8 @@ public class StringCalculator {
 		// TODO: Need to write a logic here.
 	}
 
+	public Integer add(String string) {
+		return null;
+	}
+
 }
