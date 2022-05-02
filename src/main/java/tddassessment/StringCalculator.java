@@ -4,13 +4,20 @@ public class StringCalculator {
 
 	public static void main(String[] args) {
 		// TODO: Need to write a logic here.
+		
+		//StringCalculator calculator = new StringCalculator();		
+		//System.out.println(calculator.add("14,2,7"));
 	}
 
-	public Integer add(String string) {
+	public Integer add(String numbers) {
 		int sum = 0;
 		
-		if(!(string.isBlank() && string.isEmpty()))
-			sum = Integer.parseInt(string);
+		if(!(numbers.isBlank() && numbers.isEmpty())) {
+			String[] numArray = numbers.split(",");
+			
+			for(String value : numArray)
+				sum += Integer.parseInt(value);
+		}
 		
 		return sum;
 	}
