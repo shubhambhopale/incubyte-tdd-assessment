@@ -29,14 +29,16 @@ class TestStringCalculator {
 	public void testSeveralNumberStringWithCalculator() {
 		assertEquals(23, calculator.add("14,2,7"), "Should return proper addition for the number(s).");
 	}
-	
+
 	@Test
 	public void testNewLineBetweenNumbersStringWithCalculator() {
-		assertEquals(36, calculator.add("6\n21,9"), "Should return proper addition for the number(s).");
+		assertEquals(36, calculator.add("6\n21,9"),
+				"Should return proper addition for the number(s) even with a New Line character in between.");
 	}
-	
+
 	@Test
 	public void testNewDelimiterStringWithCalculator() {
-		assertEquals(36, calculator.add("//;6\n21,9"), "Should return proper addition for the number(s).");
+		assertEquals(36, calculator.add("//;6\n21,9"),
+				"Should return proper addition for the number(s) provided a new delimiter in a string.");
 	}
 }
