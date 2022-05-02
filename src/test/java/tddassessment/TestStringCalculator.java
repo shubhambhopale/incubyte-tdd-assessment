@@ -1,14 +1,13 @@
 package tddassessment;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeAll;
 
 class TestStringCalculator {
-
-	@Test
-	void test() {
-		fail("Not yet implemented");
+	
+	StringCalculator calculator;
+	
+	@BeforeAll
+	void setUp() {
+		calculator = new StringCalculator();
 	}
-
 }
