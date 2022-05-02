@@ -7,7 +7,12 @@ public class StringCalculator {
 	}
 
 	public Integer add(String string) {
-		return 0;
+		int sum = 0;
+		
+		if(!(string.isBlank() && string.isEmpty()))
+			sum = Integer.parseInt(string);
+		
+		return sum;
 	}
 
 }
