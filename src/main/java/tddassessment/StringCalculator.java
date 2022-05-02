@@ -7,7 +7,7 @@ public class StringCalculator {
 	}
 
 	public Integer add(String string) {
-		return null;
+		return 0;
 	}
 
 }
