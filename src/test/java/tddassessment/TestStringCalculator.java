@@ -3,6 +3,7 @@ package tddassessment;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class TestStringCalculator {
@@ -22,5 +23,10 @@ class TestStringCalculator {
 	@Test
 	public void testSingleNumberStringWithCalculator() {
 		assertEquals(5, calculator.add("5"), "Should return proper addition for the number(s).");
+	}
+
+	@Test
+	public void testSeveralNumberStringWithCalculator() {
+		assertEquals(23, calculator.add("14,2,7"), "Should return proper addition for the number(s).");
 	}
 }
