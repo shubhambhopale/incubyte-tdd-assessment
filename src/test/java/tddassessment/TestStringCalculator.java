@@ -1,9 +1,9 @@
 package tddassessment;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class TestStringCalculator {
@@ -40,5 +40,11 @@ class TestStringCalculator {
 	public void testNewDelimiterStringWithCalculator() {
 		assertEquals(36, calculator.add("//;6\n21,9"),
 				"Should return proper addition for the number(s) provided a new delimiter in a string.");
+	}
+
+	@Test
+	public void testNegativeNumberStringWithCalculator() {
+		assertThrows(NegativeNumberException.class, () -> calculator.add("2,3,-4\n5,-2"),
+				"Should throw an Exception as'negatives not allowed' along with the list of negatives.");
 	}
 }
