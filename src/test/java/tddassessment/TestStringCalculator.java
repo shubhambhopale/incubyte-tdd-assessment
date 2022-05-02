@@ -34,4 +34,9 @@ class TestStringCalculator {
 	public void testNewLineBetweenNumbersStringWithCalculator() {
 		assertEquals(36, calculator.add("6\n21,9"), "Should return proper addition for the number(s).");
 	}
+	
+	@Test
+	public void testNewDelimiterStringWithCalculator() {
+		assertEquals(36, calculator.add("//;6\n21,9"), "Should return proper addition for the number(s).");
+	}
 }
